@@ -1,0 +1,129 @@
+{
+  "caffetteria": [
+  {"name":"Caffè","price":"1,40€"},
+  {"name":"Caffè Decaffeinato","price":"1,50€"},
+  {"name":"Caffè Americano","price":"1,50€"},
+  {"name":"Caffè Doppio","price":"2,80€"},
+  {"name":"Cioccolata","price":"3,50€"},
+  {"name":"Latte bianco","price":"2,00€"},
+  {"name":"Latte di Soia/AD","price":"2,50€"},
+  {"name":"Croissant","price":"1,60€"},
+  {"name":"Croissant Vegano","price":"1,80€"},
+  {"name":"Pizzetta Sfoglia","price":"2,00€"},
+  {"name":"Latte Macchiato","price":"3,00€"},
+  {"name":"Cappuccino","price":"1,80€"},
+  {"name":"Cappuccino di Soia/AD","price":"2,30€"},
+  {"name":"Cappuccino Dec","price":"2,00€"},
+  {"name":"Cappuccino Dec di Soia/AD","price":"2,50€"},
+  {"name":"Ginseng","price":"2,00€"},
+  {"name":"Orzo","price":"2,00€"},
+  {"name":"Caffè Frullato","price":"3,00€"},
+  {"name":"Caffè Frullato Corretto","price":"4,00€"},
+  {"name":"The caldo","price":"3,00€"},
+  {"name":"Infusi","price":"3,50€"},
+  
+  {"name":"Correzione alcol","price":"1,00€"},
+  {"name":"Correzione soia","price":"0,50€"}
+  ],
+  
+  "bevande": [
+  {"name":"Acqua bicchiere","price":"0.50€"},
+  {"name":"Acqua bottiglietta 0.5cl","price":"1.50€"},
+  {"name":"Acqua bottiglietta 1 lt","price":"2.00€"},
+  {"name":"Coca Cola","price":"3.00€"},
+  {"name":"Coca Cola Zero","price":"3.00€"},
+  {"name":"Fanta","price":"3.00€"},
+  {"name":"Sprite","price":"3.00€"},
+  {"name":"Estathè pesca/limone","price":"3.00€"},
+  {"name":"Lemonsoda","price":"3.00€"},
+  {"name":"Succo di Frutta 200ml","price":"3.00€"},
+  {"name":"RedBull","price":"1.50€"},
+  {"name":"Acqua Tonica","price":"1.70€"},
+  {"name":"Ginger Beer","price":"3.50€"}
+  ],
+  
+  "birre": [
+  {"name":"Ichnusa 33","price":"3.00€"},
+  {"name":"Ichnusa Limone","price":"3.50€"},
+  {"name":"Beck's","price":"3.50€"},
+  {"name":"Heineken","price":"3.50€"},
+  {"name":"Corona","price":"4.50€"},
+  {"name":"Gluten Free","price":"4.00€"}
+  ],
+  
+  "aperitivi": [
+  {"name":"Crodino","price":"3.00€"},
+  {"name":"Bitter","price":"3.00€"},
+  {"name":"Cocktail San Pellegrino","price":"3.00€"},
+  {"name":"Campari Soda","price":"3.50€"}
+  ],
+  
+  "panini": [
+  {"name":"Monopoly","price":"5.50","description":"Con stracchino cremoso e verdure fresche.","ingredients":"Pane, rucola, stracchino, pomodoro, zucchine grigliate, scaglie di grana"},
+  {"name":"Trivial","price":"5.50€","description":"Con il gusto deciso del tonno.","ingredients":"Pane, tonno, stracchino, cipolle, pomodoro, guacamole"},
+  {"name":"Shangai","price":"5.00","description":"Con la freschezza della mozzarella.","ingredients":"Pane, mozzarella, pomodoro, basilico, pesto leggero"},
+  {"name":"Scarabeo","price":"5.50","description":"Con il sapore delicato del prosciutto cotto.","ingredients":"Pane, prosciutto cotto, philadelphia, pomodoro, insalata"},
+  {"name":"Jenga","price":"7.00","description":"Con succulenti straccetti di pollo.","ingredients":"Pane, straccetti di pollo, peperoni, provola dolce, bacon, salsa messicana"},
+  {"name":"Taboo","price":"5.50","description":"Con il carattere intenso dello speck.","ingredients":"Speck, gorgonzola, noci, cipolla"},
+  {"name":"Uno","price":"6.50","description":"Con il profumo autentico del prosciutto crudo.","ingredients":"Pane, prosciutto crudo, rucola, melanzane, pomodoro"},
+  {"name":"Urban","price":"3.00","description":"Con la bontà semplice della mortadella.","ingredients":"Pane, mortadella"}
+  ],
+  
+  "amari": [
+  {"name":"Anima nera","price":"5.00€"},
+  {"name":"Amaro del capo","price":"4.50€"},
+  {"name":"Averna","price":"4.50€"},
+  {"name":"Baileys","price":"4.50€"},
+  {"name":"Branca menta","price":"4.50€"},
+  {"name":"Cynar","price":"4.50€"},
+  {"name":"Disaronno","price":"4.50€"},
+  {"name":"Fernet Branca","price":"4.50€"},
+  {"name":"Jägermeister","price":"4.50€"},
+  {"name":"Limoncello","price":"4.00€"},
+  {"name":"Mirto","price":"4.00€"},
+  {"name":"Mirto bianco","price":"4.50€"},
+  {"name":"Montenegro","price":"4.50€"},
+  {"name":"Ramazzotti","price":"4.50€"},
+  {"name":"Sambuca","price":"4.00€"},
+  {"name":"Grappa 903","price":"5.00€"}
+  ],
+  
+  "cocktail": [
+  {"name":"Americano","price":"7.00€"},
+  {"name":"Aperol Spritz","price":"6.00€"},
+  {"name":"Campari Spritz","price":"6.00€"},
+  {"name":"Hugo Spritz","price":"6.00€"},
+  {"name":"Tropical Spritz","price":"7.00€"},
+  {"name":"Espresso Martini","price":"8.00€"},
+  {"name":"Mojito","price":"8.00€"},
+  {"name":"Moscow Mule","price":"8.00€"},
+  {"name":"Negroni","price":"8.00€"},
+  {"name":"Pina Colada","price":"8.00€"},
+  {"name":"Vodka Redbull","price":"8.00€"}
+  ],
+  
+  "vini": [
+  {"name":"Calaluna","price":"4.00€"},
+  {"name":"Buio","price":"4.50€"},
+  {"name":"Filieri","price":"4.00€"},
+  {"name":"Karmis","price":"4.50€"}
+  ],
+  
+  "whiskey": [
+  {"name":"Black Label","price":"6.00€"},
+  {"name":"laphroaig 10","price":"9.00€"},
+  {"name":"Jack Daniel's ","price":"4.50€"},
+  {"name":"Jack Daniel's honey","price":"5.00€"}
+  ],
+  
+  
+  "distillati": [
+  {"name":"","price":"6.00€"},
+  {"name":"Bacardi","price":"6.00€"},
+  {"name":"Pampero","price":"6.00€"},
+  {"name":"Tanquerai Gin","price":"6.00€"}
+  ]
+  
+  
+  
+}
