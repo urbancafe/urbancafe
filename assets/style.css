@@ -155,4 +155,21 @@
         
         .modal.open .modal-content {
             transform: scale(1);
+
+        }
+
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(252, 212, 1, 0.5));
+                transform: scale(1);
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(252, 212, 1, 0.9));
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite;
         }
