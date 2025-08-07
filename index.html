@@ -13,8 +13,8 @@
 <body class="relative">
     <!-- Header -->
     <header class="header fixed top-0 left-0 w-full z-50 py-4 px-6 flex justify-between items-center">
-        <div class="logo text-2xl font-bold text-white">
-            <span class="text-[#fcd401]">URBAN</span><span class="text-[#e60f0b]"> CAFÈ</span>
+        <div class="logo">
+            <img src="logo.png" alt="Urban Cafè Logo" class="h-10">
         </div>
         <button id="theme-toggle" class="text-white focus:outline-none mr-4">
             <i class="fas fa-moon text-xl"></i>
@@ -82,8 +82,7 @@
             <div class="md:w-1/2">
                 <p class="text-lg mb-6">Fondato nel 2010, Urban Cafè nasce dalla passione per il caffè di qualità e dall'amore per l'atmosfera urbana. Il nostro obiettivo è creare un luogo accogliente dove potersi rilassare, lavorare o incontrare amici.</p>
                 <p class="text-lg mb-6">Tutti i nostri prodotti sono selezionati con cura, dai chicchi di caffè alle materie prime per i nostri panini. Crediamo nella sostenibilità e nel supporto ai produttori locali.</p>
-                <p class="text-lg">Spirito urbano, caffè d'eccellenza. Da anni punto di riferimento per i coffe lovers di Tortolì</p>
-				<p class="text-4xl font-bold text-center mb-16"><span class="text-[#fcd401]">#URBANIZZATEVI</span></p>
+                <p class="text-lg">Il nostro team è composto da professionisti appassionati che amano condividere la loro conoscenza e creare esperienze indimenticabili per i nostri clienti.</p>
             </div>
             <div class="md:w-1/2">
                 <img src="img\about1.jpg" 
@@ -96,27 +95,33 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\photo7.jpg" 
-                     alt="Caffè" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Caffè" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\photo6.jpg" 
-                     alt="Interno" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Interno" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\photo1.jpg" 
-                     alt="Guitar" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Panini" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\photo2.jpg" 
-                     alt="Divani" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Bar" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\photo3.jpg" 
-                     alt="Veranda" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Team" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
             <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
                 <img src="img\hero.jpg" 
-                     alt="Interno2" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                     alt="Evento" class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+                     onclick="openGalleryModal(this.src, this.alt)">
             </div>
         </div>
     </section>
@@ -179,8 +184,19 @@
             </div>
         </div>
     </div>
+	
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <button id="close-gallery-modal" class="absolute top-6 right-6 text-white text-4xl focus:outline-none z-50">
+            &times;
+        </button>
+        <div class="modal-content max-w-6xl w-full max-h-[90vh]">
+            <img id="gallery-modal-image" src="" alt="" class="w-full h-full object-contain">
+        </div>
+    </div>
 </body>
 </html>
+
 
 
 
