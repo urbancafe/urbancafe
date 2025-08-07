@@ -67,7 +67,7 @@ function openMenuModal(category) {
             itemElement.innerHTML = `
                 <div class="flex justify-between items-start mb-2">
                     <h4 class="font-bold text-lg">${item.name}</h4>
-                    <span class="font-bold text-[#fcd401]">€${item.price}</span>
+                    <span class="font-black">€${item.price}</span>
                 </div>
                 <p class="text-gray-600 mb-2">${item.description || ''}</p>
                 <p class="text-sm text-gray-500"><strong>Ingredienti:</strong> ${item.ingredients || ''}</p>
@@ -76,7 +76,7 @@ function openMenuModal(category) {
             itemElement.innerHTML = `
                 <div class="flex justify-between">
                     <span>${item.name}</span>
-                    <span class="font-bold text-[#fcd401]">€${item.price}</span>
+                    <span class="font-black">€${item.price}</span>
                 </div>
             `;
         }
@@ -238,3 +238,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
