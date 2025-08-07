@@ -182,7 +182,20 @@ function autoThemeBasedOnTime() {
 }
 
 
-
+            // Hide splash screen after 3 seconds
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.style.opacity = '1';
+                splashScreen.style.transition = 'opacity 0.5s ease-out';
+                
+                setTimeout(() => {
+                    splashScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        splashScreen.remove();
+                    }, 500);
+                }, 2500);
+            }, 500);
+            
         // Gallery modal functions
         function openGalleryModal(src, alt) {
             const modal = document.getElementById('gallery-modal');
@@ -238,4 +251,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
