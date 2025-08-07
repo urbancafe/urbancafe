@@ -181,9 +181,35 @@ function autoThemeBasedOnTime() {
     setTheme(isNightTime ? 'dark' : 'light');
 }
 
+
+
+        // Gallery modal functions
+        function openGalleryModal(src, alt) {
+            const modal = document.getElementById('gallery-modal');
+            const img = document.getElementById('gallery-modal-image');
+            img.src = src;
+            img.alt = alt;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('gallery-modal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+
 // Initialize all
 document.addEventListener('DOMContentLoaded', async () => {
     await loadMenuData();
+	
+            // Gallery modal event listeners
+            document.getElementById('close-gallery-modal').addEventListener('click', closeGalleryModal);
+            document.getElementById('gallery-modal').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('gallery-modal')) {
+                    closeGalleryModal();
+                }
+            });
     initMenu();
 
     const savedTheme = localStorage.getItem('theme');
