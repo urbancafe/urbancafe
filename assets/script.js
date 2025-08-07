@@ -180,22 +180,6 @@ function autoThemeBasedOnTime() {
     const isNightTime = hours >= 18 || hours <= 6;
     setTheme(isNightTime ? 'dark' : 'light');
 }
-
-
-            // Hide splash screen after 3 seconds
-            setTimeout(() => {
-                const splashScreen = document.getElementById('splash-screen');
-                splashScreen.style.opacity = '1';
-                splashScreen.style.transition = 'opacity 0.5s ease-out';
-                
-                setTimeout(() => {
-                    splashScreen.style.opacity = '0';
-                    setTimeout(() => {
-                        splashScreen.remove();
-                    }, 500);
-                }, 2500);
-            }, 500);
-            
         // Gallery modal functions
         function openGalleryModal(src, alt) {
             const modal = document.getElementById('gallery-modal');
@@ -216,6 +200,20 @@ function autoThemeBasedOnTime() {
 document.addEventListener('DOMContentLoaded', async () => {
     await loadMenuData();
 	
+            // Hide splash screen after 3 seconds
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                splashScreen.style.opacity = '1';
+                splashScreen.style.transition = 'opacity 0.5s ease-out';
+                
+                setTimeout(() => {
+                    splashScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        splashScreen.remove();
+                    }, 500);
+                }, 2500);
+            }, 500);
+            
             // Gallery modal event listeners
             document.getElementById('close-gallery-modal').addEventListener('click', closeGalleryModal);
             document.getElementById('gallery-modal').addEventListener('click', (e) => {
@@ -251,5 +249,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
