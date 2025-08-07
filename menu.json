@@ -89,17 +89,17 @@
   ],
   
   "cocktail": [
-  {"name":"Americano","price":"7.00"},
-  {"name":"Aperol Spritz","price":"6.00"},
-  {"name":"Campari Spritz","price":"6.00"},
-  {"name":"Hugo Spritz","price":"6.00"},
-  {"name":"Tropical Spritz","price":"7.00"},
-  {"name":"Espresso Martini","price":"8.00"},
-  {"name":"Mojito","price":"8.00"},
-  {"name":"Moscow Mule","price":"8.00"},
-  {"name":"Negroni","price":"8.00"},
-  {"name":"Pina Colada","price":"8.00"},
-  {"name":"Vodka Redbull","price":"8.00"}
+  {"name":"Americano","price":"7.00","ingredients":"Campari, vermouth rosso, soda"},
+  {"name":"Aperol Spritz","price":"6.00","ingredients":"Aperol, prosecco, soda"},
+  {"name":"Campari Spritz","price":"6.00","ingredients":"Campari, prosecco, soda"},
+  {"name":"Hugo Spritz","price":"6.00","ingredients":"Sciroppo di sambuco, prosecco, soda"},
+  {"name":"Tropical Spritz","price":"7.00","ingredients":"Passion fruit, prosecco, soda"},
+  {"name":"Espresso Martini","price":"8.00","ingredients":"Vodka, espresso, liquore al caffè, sciroppo di zucchero"},
+  {"name":"Mojito","price":"8.00","ingredients":"Rum bianco, zucchero di canna, menta, lime, succo di lime, soda"},
+  {"name":"Moscow Mule","price":"8.00","ingredients":"Vodka, ginger beer, succo di lime"},
+  {"name":"Negroni","price":"8.00","ingredients":"Campari, vermouth, gin"},
+  {"name":"Pina Colada","price":"8.00","ingredients":"Rum bianco, succo di ananas, sciroppo di cocco, , zucchine grigliate, scaglie di grana"},
+  {"name":"Vodka Redbull","price":"8.00","ingredients":"Vodka, RedBull"}
   ],
   
   "vini": [
@@ -127,4 +127,3 @@
   
   
 }
-
