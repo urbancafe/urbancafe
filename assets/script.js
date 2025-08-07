@@ -63,7 +63,7 @@ function openMenuModal(category) {
         const itemElement = document.createElement('div');
         itemElement.className = 'border-b border-gray-200 pb-4';
 
-        if (category === 'panini') {
+        if (category === 'panini' || category === 'cocktail') {
             itemElement.innerHTML = `
                 <div class="flex justify-between items-start mb-2">
                     <h4 class="font-bold text-lg">${item.name}</h4>
@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
