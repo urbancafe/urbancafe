@@ -37,8 +37,8 @@
   {"name":"Estathè pesca/limone","price":"3.00"},
   {"name":"Lemonsoda","price":"3.00"},
   {"name":"Succo di Frutta 200ml","price":"3.00"},
-  {"name":"RedBull","price":"1.50"},
-  {"name":"Acqua Tonica","price":"1.70"},
+  {"name":"RedBull","price":"3.50"},
+  {"name":"Acqua Tonica","price":"3.00"},
   {"name":"Ginger Beer","price":"3.50"}
   ],
   
@@ -127,3 +127,4 @@
   
   
 }
+
