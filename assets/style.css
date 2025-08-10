@@ -172,5 +172,32 @@
             animation: pulse-glow 2s infinite;
         }
 
+        .carousel {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+
+        .carousel-slide {
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+
+        .carousel-slide img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
 
