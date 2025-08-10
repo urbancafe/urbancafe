@@ -51,22 +51,68 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <img src="img\hero.jpg" 
-             alt="Urban Cafè" class="absolute inset-0 w-full h-full object-cover">
-        
-        <div class="relative z-10 text-center px-4">
-            <img src="logo.png" alt="Urban Cafè Logo" class="mx-auto mb-8 w-64 md:w-80">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">BENVENUTI ALL'<span class="text-[#fcd401]">URBAN CAFÈ</span></h1>
-            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Un luogo urbano dove tradizione e modernità si incontrano</p>
-            <a href="#menu" class="btn-primary inline-block px-8 py-3 rounded-full font-bold text-black">Scopri il nostro menu</a>
+    <section id="home" class="relative h-screen overflow-hidden">
+        <!-- Carousel -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="carousel h-full w-full relative">
+                <!-- Slide 1 -->
+                <div class="carousel-slide transition-opacity duration-1000 ease-in-out opacity-100">
+                    <div class="parallax-img-container">
+                        <img src="img/slide1.jpg" 
+                             alt="Urban Cafè">
+                        <div class="absolute inset-0 bg-black opacity-40"></div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide transition-opacity duration-1000 ease-in-out opacity-0">
+                    <div class="parallax-img-container">
+                        <img src="img/slide2.jpg"
+                             alt="Biliardo">
+                        <div class="absolute inset-0 bg-black opacity-40"></div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide transition-opacity duration-1000 ease-in-out opacity-0">
+                    <div class="parallax-img-container">
+                        <img src="img/slide3.jpg" 
+                             alt="Biliardino">
+                        <div class="absolute inset-0 bg-black opacity-40"></div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide transition-opacity duration-1000 ease-in-out opacity-0">
+                    <div class="parallax-img-container">
+                        <img src="img/photo4.jpg" 
+                             alt="Giochi da tavolo">
+                        <div class="absolute inset-0 bg-black opacity-40"></div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide transition-opacity duration-1000 ease-in-out opacity-0">
+                    <div class="parallax-img-container">
+                        <img src="img/photo7.jpg" 
+                             alt="Freccette">
+                        <div class="absolute inset-0 bg-black opacity-40"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <a href="#menu" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-4xl bounce">
+        <!-- Content -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+            <div class="text-center px-4">
+                <img src="logo.png" alt="Urban Cafè Logo" class="mx-auto mb-8 w-64 md:w-80">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">BENVENUTI ALL'<span class="text-[#fcd401]">URBAN CAFÈ</span></h1>
+                <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Un luogo urbano dove tradizione, modernità e divertimento si incontrano</p>
+                <a href="#menu" class="btn-primary inline-block px-8 py-3 rounded-full font-bold text-black">Scopri il nostro menu</a>
+            </div>
+        </div>
+        
+        <a href="#menu" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-4xl bounce z-10">
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
+
 
     <div class="divider"></div>
 
@@ -204,6 +250,7 @@
     </div>
 </body>
 </html>
+
 
 
 
