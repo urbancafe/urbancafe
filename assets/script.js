@@ -180,6 +180,7 @@ function autoThemeBasedOnTime() {
     const isNightTime = hours >= 18 || hours <= 6;
     setTheme(isNightTime ? 'dark' : 'light');
 }
+
         // Gallery modal functions
         function openGalleryModal(src, alt) {
             const modal = document.getElementById('gallery-modal');
@@ -196,10 +197,44 @@ function autoThemeBasedOnTime() {
         }
 
 
+        // Carousel functionality
+        function initCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }
+
+            // Parallax effect on scroll
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                const carousel = document.querySelector('.carousel');
+                const carouselHeight = carousel.offsetHeight;
+                
+                slides.forEach(slide => {
+                    const img = slide.querySelector('img');
+                    if (img) {
+                        const scrollPercent = (scrollPosition / carouselHeight) * 100;
+                        img.style.transform = `translateY(-${scrollPercent * 0.5}px)`;
+                    }
+                });
+            });
+            
+            setInterval(nextSlide, 5000);
+        }
+		
 // Initialize all
 document.addEventListener('DOMContentLoaded', async () => {
     await loadMenuData();
 	
+            initCarousel();
             // Hide splash screen after 3 seconds
             setTimeout(() => {
                 const splashScreen = document.getElementById('splash-screen');
@@ -249,6 +284,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
