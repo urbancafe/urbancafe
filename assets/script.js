@@ -197,39 +197,71 @@ function autoThemeBasedOnTime() {
         }
 
 
-        // Carousel functionality
-        function initCarousel() {
-            const slides = document.querySelectorAll('.carousel-slide');
-            let currentSlide = 0;
-            
-            function nextSlide() {
-                slides[currentSlide].classList.remove('opacity-100');
-                slides[currentSlide].classList.add('opacity-0');
-                
-                currentSlide = (currentSlide + 1) % slides.length;
-                
-                slides[currentSlide].classList.remove('opacity-0');
-                slides[currentSlide].classList.add('opacity-100');
-            }
+		// Carousel functionality with mobile/desktop pictures
+function initCarousel() {
+    const carouselContainer = document.getElementById('carousel-container');
 
-            // Parallax effect on scroll
-            window.addEventListener('scroll', function() {
-                const scrollPosition = window.pageYOffset;
-                const carousel = document.querySelector('.carousel');
-                const carouselHeight = carousel.offsetHeight;
-                
-                slides.forEach(slide => {
-                    const img = slide.querySelector('img');
-                    if (img) {
-                        const scrollPercent = (scrollPosition / carouselHeight) * 100;
-                        img.style.transform = `translateY(-${scrollPercent * 0.5}px)`;
-                    }
-                });
-            });
-            
-            setInterval(nextSlide, 5000);
-        }
-		
+    // Desktop Slide
+    const desktopSlides = [
+	"img/hero.jpg",
+	"img/photo5.jpg",
+	"img/photo6.jpg",
+	"img/slide2.jpg",
+	"img/slide5.jpg"
+    ];
+
+    // Mobile Slide
+    const mobileSlides = [
+	"img/slide3.jpg",
+	"img/slide1.jpg",
+	"img/slide4.jpg",
+	"img/slide2.jpg",
+	"img/slide5.jpg"
+    ];
+
+    const isMobile = window.innerWidth <= 768;
+    const slidesToUse = isMobile ? mobileSlides : desktopSlides;
+
+    // Creazione dinamica delle slide
+    slidesToUse.forEach((src, index) => {
+        const slide = document.createElement('div');
+        slide.className = `carousel-slide transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+        slide.innerHTML = `
+            <div class="parallax-img-container">
+                <img src="${src}" alt="Urban Cafè">
+                <div class="absolute inset-0 bg-black opacity-40"></div>
+            </div>
+        `;
+        carouselContainer.appendChild(slide);
+    });
+
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+    }
+
+    // Effetto parallasse
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        const carouselHeight = carouselContainer.offsetHeight;
+        slides.forEach(slide => {
+            const img = slide.querySelector('img');
+            if (img) {
+                const scrollPercent = (scrollPosition / carouselHeight) * 100;
+                img.style.transform = `translateY(-${scrollPercent * 1.5}px)`;
+            }
+        });
+    });
+
+    setInterval(nextSlide, 5000);
+}
+
 // Initialize all
 document.addEventListener('DOMContentLoaded', async () => {
     await loadMenuData();
@@ -284,6 +316,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
