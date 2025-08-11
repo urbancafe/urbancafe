@@ -222,7 +222,7 @@ function initCarousel() {
     const isMobile = window.innerWidth <= 768;
     const slidesToUse = isMobile ? mobileSlides : desktopSlides;
 
-    // Creazione dinamica delle slide
+    // Create slide
     slidesToUse.forEach((src, index) => {
         const slide = document.createElement('div');
         slide.className = `carousel-slide transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
@@ -246,7 +246,7 @@ function initCarousel() {
         slides[currentSlide].classList.add('opacity-100');
     }
 
-    // Effetto parallasse
+    // Parallax effect
     window.addEventListener('scroll', function() {
         const scrollPosition = window.pageYOffset;
         const carouselHeight = carouselContainer.offsetHeight;
@@ -316,6 +316,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
