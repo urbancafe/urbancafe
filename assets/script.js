@@ -207,7 +207,7 @@ function initCarousel() {
 	"img/photo5.jpg",
 	"img/photo6.jpg",
 	"img/slide2.jpg",
-	"img/slide5.jpg"
+	"img/photo4.jpg"
     ];
 
     // Mobile Slide
@@ -316,6 +316,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
