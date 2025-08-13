@@ -261,11 +261,19 @@ function initCarousel() {
 
     setInterval(nextSlide, 5000);
 }
+
+// Games card flip effect
 document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', () => {
+        document.querySelectorAll('.flip-card').forEach(c => {
+            if (c !== card) { 
+                c.classList.remove('flipped');
+            }
+        });
         card.classList.toggle('flipped');
     });
 });
+
 
 // Initialize all
 document.addEventListener('DOMContentLoaded', async () => {
@@ -321,6 +329,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
