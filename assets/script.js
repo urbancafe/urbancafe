@@ -261,6 +261,11 @@ function initCarousel() {
 
     setInterval(nextSlide, 5000);
 }
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
 
 // Initialize all
 document.addEventListener('DOMContentLoaded', async () => {
@@ -316,6 +321,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         interval: 100
     });
 });
+
 
 
 
